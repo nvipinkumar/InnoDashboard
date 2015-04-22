@@ -1,0 +1,35 @@
+<%- model_class = Kandc -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.titleize %></h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:Name) %>:</strong></dt>
+  <dd><%= @kandc.Name %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Summary) %>:</strong></dt>
+  <dd><%= @kandc.Summary %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Description) %>:</strong></dt>
+  <dd><%= @kandc.Description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Owner) %>:</strong></dt>
+  <dd><%= @kandc.Owner %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Reviewed) %>:</strong></dt>
+  <dd><%= @kandc.Reviewed %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Status) %>:</strong></dt>
+  <dd><%= @kandc.Status %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Comments) %>:</strong></dt>
+  <dd><%= @kandc.Comments %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Action) %>:</strong></dt>
+  <dd><%= @kandc.Action %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:Imperative) %>:</strong></dt>
+  <dd><%= @kandc.Imperative %></dd>
+</dl>
+
+<%= link_to t('.back', :default => t("helpers.links.back")),
+              kandcs_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_kandc_path(@kandc), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              kandc_path(@kandc),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>

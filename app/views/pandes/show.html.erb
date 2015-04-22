@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pande.Name %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @pande.Summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pande.Description %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @pande.Owner %>
+</p>
+
+<p>
+  <strong>Reviewed:</strong>
+  <%= @pande.Reviewed %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @pande.Status %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @pande.Comments %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @pande.Action %>
+</p>
+
+<p>
+  <strong>Imperative:</strong>
+  <%= @pande.Imperative %>
+</p>
+
+<%= link_to 'Edit', edit_pande_path(@pande) %> |
+<%= link_to 'Back', pandes_path %>

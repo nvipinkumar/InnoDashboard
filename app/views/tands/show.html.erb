@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tand.Name %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @tand.Summary %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @tand.Description %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @tand.Owner %>
+</p>
+
+<p>
+  <strong>Reviewed:</strong>
+  <%= @tand.Reviewed %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @tand.Status %>
+</p>
+
+<p>
+  <strong>Comments:</strong>
+  <%= @tand.Comments %>
+</p>
+
+<p>
+  <strong>Action:</strong>
+  <%= @tand.Action %>
+</p>
+
+<p>
+  <strong>Imperative:</strong>
+  <%= @tand.Imperative %>
+</p>
+
+<%= link_to 'Edit', edit_tand_path(@tand) %> |
+<%= link_to 'Back', tands_path %>

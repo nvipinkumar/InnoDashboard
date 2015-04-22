@@ -1,0 +1,41 @@
+<h1>Process and Ecossytem</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Summary</th>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Reviewed</th>
+      <th>Status</th>
+      <th>Comments</th>
+      <th>Action</th>
+      <th>Imperative</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pandes.each do |pande| %>
+      <tr>
+        <td><%= pande.Name %></td>
+        <td><%= pande.Summary %></td>
+        <td><%= pande.Description %></td>
+        <td><%= pande.Owner %></td>
+        <td><%= pande.Reviewed %></td>
+        <td><%= pande.Status %></td>
+        <td><%= pande.Comments %></td>
+        <td><%= pande.Action %></td>
+        <td><%= pande.Imperative %></td>
+        <td><%= link_to 'Show', pande %></td>
+        <td><%= link_to 'Edit', edit_pande_path(pande) %></td>
+        <td><%= link_to 'Destroy', pande, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idea', new_pande_path %>

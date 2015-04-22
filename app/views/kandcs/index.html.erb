@@ -1,0 +1,54 @@
+<%- model_class = Kandc -%>
+<div class="page-header">
+  <h1><%=t 'Knowledge & Culture'  %></h1>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <!-- <th><%= model_class.human_attribute_name(:id) %></th> -->
+      <th><%= model_class.human_attribute_name(:Name) %></th>
+      <th><%= model_class.human_attribute_name(:Summary) %></th>
+      <th><%= model_class.human_attribute_name(:Description) %></th>
+      <th><%= model_class.human_attribute_name(:Owner) %></th>
+      <th><%= model_class.human_attribute_name(:Reviewed) %></th>
+      <th><%= model_class.human_attribute_name(:Status) %></th>
+      <th><%= model_class.human_attribute_name(:Comments) %></th>
+      <th><%= model_class.human_attribute_name(:Action) %></th>
+      <th><%= model_class.human_attribute_name(:Imperative) %></th>
+      <!-- <th><%= model_class.human_attribute_name(:created_at) %></th> -->
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @kandcs.each do |kandc| %>
+      <tr>
+        <!-- <td><%= link_to kandc.id, kandc_path(kandc) %></td> -->
+        <td><%= kandc.Name %></td>
+        <td><%= kandc.Summary %></td>
+        <td><%= kandc.Description %></td>
+        <td><%= kandc.Owner %></td>
+        <td><%= kandc.Reviewed %></td>
+        <td><%= kandc.Status %></td>
+        <td><%= kandc.Comments %></td>
+        <td><%= kandc.Action %></td>
+        <td><%= kandc.Imperative %></td>
+        <!-- <td><%=l kandc.created_at %></td> -->
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      kandc_path(kandc), :class => 'btn btn-default btn-xs' %>          
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_kandc_path(kandc), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      kandc_path(kandc),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to t('New Idea'),
+            new_kandc_path,
+            :class => 'btn btn-primary' %>

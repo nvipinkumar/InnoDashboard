@@ -1,0 +1,53 @@
+<%= form_for(@pande) do |f| %>
+  <% if @pande.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pande.errors.count, "error") %> prohibited this pande from being saved:</h2>
+
+      <ul>
+      <% @pande.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Name, "Idea Name" %><br>
+    <%= f.text_field :Name %>
+  </div>
+  <div class="field">
+    <%= f.label :Summary, "Idea Summary" %><br>
+    <%= f.text_field :Summary %>
+  </div>
+  <div class="field">
+    <%= f.label :Description, "Idea Description" %><br>
+    <%= f.text_area :Description %>
+  </div>
+  <div class="field">
+    <%= f.label :Owner, "Idea Owner" %><br>
+    <%= f.text_area :Owner %>
+  </div>
+  <div class="field">
+    <%= f.label :Reviewed, "Reviewed by" %><br>
+    <%= f.text_area :Reviewed %>
+  </div>
+  <div class="field">
+    <%= f.label :Status, "Idea Status" %><br>
+    <%= f.number_field :Status %>
+  </div>
+  <div class="field">
+    <%= f.label :Comments %><br>
+    <%= f.text_area :Comments %>
+  </div>
+  <div class="field">
+    <%= f.label :Action, "Pending Action Item" %><br>
+    <%= f.text_area :Action %>
+  </div>
+  <div class="field">
+    <%= f.label :Imperative, "Imperative Owner(s)" %><br>
+    <%= f.text_field :Imperative %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Create Idea' %>
+  </div>
+<% end %>

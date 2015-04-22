@@ -1,0 +1,41 @@
+<h1>Technology and Solution</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Summary</th>
+      <th>Description</th>
+      <th>Owner</th>
+      <th>Reviewed</th>
+      <th>Status</th>
+      <th>Comments</th>
+      <th>Action</th>
+      <th>Imperative</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tands.each do |tand| %>
+      <tr>
+        <td><%= tand.Name %></td>
+        <td><%= tand.Summary %></td>
+        <td><%= tand.Description %></td>
+        <td><%= tand.Owner %></td>
+        <td><%= tand.Reviewed %></td>
+        <td><%= tand.Status %></td>
+        <td><%= tand.Comments %></td>
+        <td><%= tand.Action %></td>
+        <td><%= tand.Imperative %></td>
+        <td><%= link_to 'Show', tand %></td>
+        <td><%= link_to 'Edit', edit_tand_path(tand) %></td>
+        <td><%= link_to 'Destroy', tand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Idea', new_tand_path %>

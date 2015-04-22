@@ -1,0 +1,2 @@
+module TandsHelper
+end

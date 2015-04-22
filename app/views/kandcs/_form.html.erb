@@ -1,0 +1,87 @@
+<%= form_for @kandc, :html => { :class => "form-horizontal kandc" } do |f| %>
+
+    <% if @kandc.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@kandc.errors.count, "error") %> prohibited this kandc from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @kandc.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :Name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Summary, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Summary, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Summary]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Description, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Description, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Description]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Owner, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Owner, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Owner]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Reviewed, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Reviewed, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Reviewed]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Status, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Status, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Status]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Comments, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Comments, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Comments]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Action, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Action, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Action]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :Imperative, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :Imperative, :class => 'form-control' %>
+    </div>
+    <%= error_span(@kandc[:Imperative]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            kandcs_path, :class => 'btn btn-default' %>
+
+<% end %>

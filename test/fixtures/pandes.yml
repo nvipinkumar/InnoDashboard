@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Summary: MyString
+  Description: MyText
+  Owner: MyText
+  Reviewed: MyText
+  Status: 1
+  Comments: MyText
+  Action: MyText
+  Imperative: MyString
+
+two:
+  Name: MyString
+  Summary: MyString
+  Description: MyText
+  Owner: MyText
+  Reviewed: MyText
+  Status: 1
+  Comments: MyText
+  Action: MyText
+  Imperative: MyString
