@@ -2,16 +2,20 @@
 <div class="page-header">
   <h1><%=t 'Knowledge & Culture'  %></h1>
 </div>
+<style>
+   table {border-collapse:collapse; table-layout:fixed; width:800px;}
+   table td {border:solid 1px #fab; width:400px; word-wrap:break-word;}
+   </style>
 <table class="table table-striped">
   <thead>
     <tr>
       <!-- <th><%= model_class.human_attribute_name(:id) %></th> -->
-      <th><%= model_class.human_attribute_name(:Name) %></th>
-      <th><%= model_class.human_attribute_name(:Summary) %></th>
+      <th><%= 'Idea Name' %></th>
+      <th><%= 'Summary' %></th>
       <th><%= model_class.human_attribute_name(:Description) %></th>
-      <th><%= model_class.human_attribute_name(:Owner) %></th>
-      <th><%= model_class.human_attribute_name(:Reviewed) %></th>
-      <th><%= model_class.human_attribute_name(:Status) %></th>
+      <th><%= 'Idea Owner' %></th>
+      <th><%= 'Reviewed by' %></th>
+      <th><%= 'Current Status' %></th>
       <th><%= model_class.human_attribute_name(:Comments) %></th>
       <th><%= model_class.human_attribute_name(:Action) %></th>
       <th><%= model_class.human_attribute_name(:Imperative) %></th>
